@@ -1,9 +1,25 @@
-.attribution {
-  margin-top: 1.5rem;
-  text-align: center;
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-mainBG: hsl(217, 54%, 11%);
+  --very-dark-blue-cardBG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --Outfit: 'Outfit', sans-serif;
+  --Outfit-light: 300;
+  --Outfit-regular: 400;
+  --Outfit-medium: 600;
+}
+body {
+  background-color: var(--very-dark-blue-mainBG);
+  min-height: 100vh;
 }
 
-.attribution__link {
-  color: var(--pink-link);
-  text-decoration: none;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding-top: 1.5rem;
+  margin: 0 auto;
+  color: var(--white);
 }
