@@ -18,8 +18,42 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 50%;
   padding-top: 1.5rem;
   margin: 0 auto;
   color: var(--white);
+  background-color: var(--very-dark-blue-cardBG);
+}
+.title {
+  font-family: var(--Outfit);
+  font-weight: var(--Outfit-regular);
+  color: var(--white);
+}
+.description {
+  font-family: var(--Outfit);
+  font-size: 18px;
+  font-weight: var(--Outfit-light);
+  color: var(--soft-blue);
+}
+.figure {
+  font-family: var(--Outfit);
+  font-weight: var(--Outfit-regular);
+  color: var(--cyan);
+}
+.clock {
+  font-family: var(--Outfit);
+  font-weight: var(--Outfit-regular);
+  color: var(--soft-blue);
+}
+
+.avatar {
+  font-family: var(--Outfit);
+  font-weight: var(--Outfit-regular);
+  color: var(--soft-blue);
+}
+.name {
+  font-family: var(--Outfit);
+  font-weight: var(--Outfit-regular);
+  color: var(--white);
+  text-decoration: none;
 }
