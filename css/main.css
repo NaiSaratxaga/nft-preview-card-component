@@ -10,50 +10,145 @@
   --Outfit-regular: 400;
   --Outfit-medium: 600;
 }
+
 body {
-  background-color: var(--very-dark-blue-mainBG);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 20px;
+  font-size: 18px;
+  background-color: var(--very-dark-blue-mainBG);
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding-top: 1.5rem;
-  margin: 0 auto;
-  color: var(--white);
+  max-width: 3550px;
   background-color: var(--very-dark-blue-cardBG);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 4px 10px 20px 15px #33331d36;
 }
-.title {
-  font-family: var(--Outfit);
-  font-weight: var(--Outfit-regular);
-  color: var(--white);
+.container:hover {
+  filter: saturate(1.2);
+  transition: ease-in-out 0.6s;
+  transform: scale(0.99);
 }
-.description {
-  font-family: var(--Outfit);
-  font-size: 18px;
-  font-weight: var(--Outfit-light);
-  color: var(--soft-blue);
+.card-image {
+  height: 300px;
+  width: 300px;
+  background: url('../images/image-equilibrium.jpg');
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid #ffffff71;
 }
-.figure {
-  font-family: var(--Outfit);
-  font-weight: var(--Outfit-regular);
-  color: var(--cyan);
+.eyeIcon {
+  opacity: 0;
 }
-.clock {
-  font-family: var(--Outfit);
-  font-weight: var(--Outfit-regular);
-  color: var(--soft-blue);
+.card-image:hover > .eyeIcon {
+  opacity: 1;
+  transition: 0.2s;
+}
+.card-image:hover {
+  box-shadow: 0 310px #ffffff75 inset;
+}
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 20px 0;
 }
 
-.avatar {
-  font-family: var(--Outfit);
-  font-weight: var(--Outfit-regular);
-  color: var(--soft-blue);
-}
-.name {
-  font-family: var(--Outfit);
-  font-weight: var(--Outfit-regular);
+h1:hover {
   color: var(--white);
+}
+
+.description {
+  color: #b9b6b6;
+  padding-bottom: 4px;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.iconEth,
+.time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+.iconEth:hover img {
+  animation: flip-diagonal 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.iconEth p {
+  font-weight: 700;
+}
+
+.iconEth:hover {
+  color: #bfaf51;
+}
+
+.time:hover img {
+  transform: rotate(1080deg);
+  transition: 0.8s;
+}
+.creator {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff71;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+.creator img {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 40px;
+}
+
+.creator p a {
   text-decoration: none;
+  color: #bfaf51;
+}
+.creator p a:hover {
+  color: #ade454;
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .eyeIcon {
+    opacity: 0;
+    width: 100%;
+  }
+
+  .card-info {
+    justify-content: center;
+    gap: 20%;
+  }
+
+  .card-image:hover > .eyeIcon {
+    opacity: 0;
+  }
+
+  .card-image:hover {
+    box-shadow: none;
+  }
 }
