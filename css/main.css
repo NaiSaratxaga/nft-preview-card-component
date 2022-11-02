@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-  max-width: 3550px;
+  max-width: 350px;
   background-color: var(--very-dark-blue-cardBG);
   padding: 25px;
   border-radius: 15px;
