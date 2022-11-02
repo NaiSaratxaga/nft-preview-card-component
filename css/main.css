@@ -5,6 +5,7 @@
   --very-dark-blue-cardBG: hsl(216, 50%, 16%);
   --very-dark-blue-line: hsl(215, 32%, 27%);
   --white: hsl(0, 0%, 100%);
+  --line-grey: hsl(0, 2%, 82%);
   --Outfit: 'Outfit', sans-serif;
   --Outfit-light: 300;
   --Outfit-regular: 400;
@@ -18,7 +19,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  font-size: 18px;
+  font-family: var(--Outfit);
   background-color: var(--very-dark-blue-mainBG);
 }
 
@@ -27,12 +28,10 @@ body {
   background-color: var(--very-dark-blue-cardBG);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 4px 10px 20px 15px #33331d36;
 }
 .container:hover {
   filter: saturate(1.2);
   transition: ease-in-out 0.6s;
-  transform: scale(0.99);
 }
 .card-image {
   height: 300px;
@@ -43,7 +42,6 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  border: 1px solid #ffffff71;
 }
 .eyeIcon {
   opacity: 0;
@@ -51,22 +49,25 @@ body {
 .card-image:hover > .eyeIcon {
   opacity: 1;
   transition: 0.2s;
+  cursor: pointer;
 }
 .card-image:hover {
   box-shadow: 0 310px #ffffff75 inset;
 }
-h1 {
+.title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: var(--Outfit-medium);
+  color: var(--white);
   margin: 20px 0;
 }
 
-h1:hover {
-  color: var(--white);
+.title:hover {
+  color: var(--cyan);
 }
 
 .description {
-  color: #b9b6b6;
+  font-weight: var(--Outfit-light);
+  color: var(--soft-blue);
   padding-bottom: 4px;
 }
 .card-info {
@@ -85,14 +86,20 @@ h1:hover {
   font-size: 16px;
 }
 .iconEth:hover img {
-  animation: flip-diagonal 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transform: rotate(1080deg);
+  transition: 0.8s;
 }
 .iconEth p {
-  font-weight: 700;
+  font-weight: var(--Outfit-regular);
+  color: var(--cyan);
 }
 
 .iconEth:hover {
-  color: #bfaf51;
+  color: var(--white);
+}
+
+.time {
+  color: var(--soft-blue);
 }
 
 .time:hover img {
@@ -102,7 +109,7 @@ h1:hover {
 .creator {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #ffffff71;
+  border-top: 1px solid var(--line-grey);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -110,16 +117,19 @@ h1:hover {
 }
 .creator img {
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   width: 40px;
 }
 
 .creator p a {
   text-decoration: none;
-  color: #bfaf51;
+  color: var(--white);
 }
 .creator p a:hover {
-  color: #ade454;
+  color: var(--cyan);
+}
+.creation {
+  color: var(--soft-blue);
 }
 @media (max-width: 400px) {
   .container {
