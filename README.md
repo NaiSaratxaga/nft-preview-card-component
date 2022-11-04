@@ -27,12 +27,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/hover.png)
+![](./images/nft.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/NaiSaratxaga/nft-preview-card-component)
+- Live Site URL: [Add live site URL here](https://naisaratxaga.github.io/nft-preview-card-component/)
 
 ### Built with
 
